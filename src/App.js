@@ -34,12 +34,22 @@ class App extends Component {
   hour: getCurHour(),
   }
 
+  removeCharacter = index => {
+    const { characters } = this.state
+
+    this.setState({
+      characters: characters.filter((character, i) => {
+        return i !== index;
+            }),
+    })
+  }
+
    
   render() {
     const {characters, greet, hour, date} = this.state
     return (
       <div className="container">
-        <Table characterData={characters} />
+        <Table characterData={characters} removeCharacter={this.removeCharacter} />
         <Greeting greetingData={greet} />
         <Wishing wishData={hour} />
         <DateFunc dateData={date} />
