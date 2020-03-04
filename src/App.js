@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Table from './Table'
+import Form from './Form'
 
 import {Greeting, DateFunc} from './Greeting';
 import {Wishing} from './Greeting';
@@ -50,6 +51,7 @@ class App extends Component {
     return (
       <div className="container">
         <Table characterData={characters} removeCharacter={this.removeCharacter} />
+        <Form />
         <Greeting greetingData={greet} />
         <Wishing wishData={hour} />
         <DateFunc dateData={date} />
