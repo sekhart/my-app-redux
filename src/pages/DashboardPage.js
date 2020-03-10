@@ -5,7 +5,10 @@ const DashboardPage = () => (
     <section>
         <h1>Dashboard</h1>
         <p>This is the dashboard.</p>
-        <Link to="/posts" className="button">View Posts</Link>
+        <div class='container-body'>
+            <Link to="/posts" className="button">View Posts</Link> &nbsp;&nbsp;
+            <Link to="/students" className="button">View Users</Link>
+        </div>
     </section>
 )
 

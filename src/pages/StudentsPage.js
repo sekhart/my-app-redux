@@ -11,15 +11,15 @@ const StudentsPage = ({ dispatch, students, loading, hasErrors }) => {
     }, [dispatch])
 
     const renderStudents = () => {
-        if (loading) return <p>Loading Students ...</p>
-        if (hasErrors) return <p>Unable to display Students.</p>
+        if (loading) return <p>Loading Users ...</p>
+        if (hasErrors) return <p>Unable to display Users.</p>
         return students.map(student => <Student key={student.id} student={student}></Student>)
 
     }
 
     return (
         <section>
-            <h1>Students</h1>
+            <h1>Users</h1>
             {renderStudents()}
         </section>
     )
