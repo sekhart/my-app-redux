@@ -1,18 +1,14 @@
 import React from 'react';
-import ReactDOM, { render } from 'react-dom';
+import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
-
+import * as serviceWorker from './serviceWorker';
 
 import './index.css';
-
-
 import App from './App';
 import rootReducer from './reducers'
-
-import * as serviceWorker from './serviceWorker';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 
@@ -20,7 +16,6 @@ render(
     <Provider store={store}>
         <App />
     </Provider>,
-
     document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
