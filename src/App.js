@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 
 import DashboardPage from './pages/DashboardPage'
 import PostsPage from './pages/PostsPage'
-import StudentsPage from './pages/StudentsPage'
+import UsersPage from './pages/UsersPage'
 
 import { Navbar } from './components/Navbar'
 
@@ -16,7 +16,7 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={DashboardPage} />
                 <Route exact path="/posts" component={PostsPage} />
-                <Route exact path="/students" component={StudentsPage} />
+                <Route exact path="/users" component={UsersPage} />
                 <Redirect to="/" />
             </Switch>
         </Router>

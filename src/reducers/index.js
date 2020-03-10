@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import postReducer from './postReducer'
-import studentReducer from './studentReducer'
+import usersReducer from './userReducer'
 
 const rootReducer = combineReducers({
     posts: postReducer,
-    students: studentReducer,
+    users: usersReducer,
 })
 
 export default rootReducer
