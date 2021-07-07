@@ -2,10 +2,10 @@
 FROM node:14-alpine
 
 # Copy the files from the current directory to app/
-COPY . app/
+COPY . my-app-redux/
 
 # Use app/ as the working directory
-WORKDIR app/
+WORKDIR my-app-redux/
 
 # Install dependencies (npm ci is similar to npm i, but for automated builds)
 RUN npm ci --only-production

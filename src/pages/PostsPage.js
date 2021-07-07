@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 
-import { fetchPosts } from '../actions/postsActions'
 import { fetchComments } from '../actions/commentsActions'
+import { fetchPosts } from '../actions/postsActions'
 import { Post } from '../components/Post'
-import { Comment } from '../components/Comment'
 
 const PostsPage = ({ dispatch, posts, loading, hasErrors }) => {
     useEffect(() => {
